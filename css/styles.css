@@ -1,4 +1,5 @@
-.header {
+.header,
+.text-picture {
   background: #151515 url("../images/intro-bg.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
@@ -20,10 +21,6 @@
 
 .header .social {
   bottom: 50px;
-}
-
-.about-img {
-  width: 200px;
 }
 
 .project:hover {
@@ -56,12 +53,15 @@
   .header .social i {
     font-size: 30px;
   }
+
   .header .roles {
     font-size: 18px !important;
   }
+
   .about-content {
     flex-direction: column;
   }
+
   .stats .stat {
     border-right: 0 !important;
     margin-bottom: 40px;
