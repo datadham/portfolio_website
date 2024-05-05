@@ -60,7 +60,8 @@
   </header>
 
   <!-- About -->
-  <section id="about" class="about bg-light py-5" style="height:100vh;">
+  <section id="about" class="about bg-light py-5 d-flex flex-column justify-content-center align-items-center"
+    style="height:100vh;">
     <div class="container align-items-center">
       <div class="text-center">
         <h4 class="text-uppercase fw-bold text-primary">About Me</h4>
@@ -73,7 +74,20 @@
         recommendations.
       </p>
 
-      <div class="div d-flex align-items-center justify-content-center gap-2">
+
+      <span class="badge bg-secondary fw-light px-2">Cloud computing <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-dark fw-light px-2">Machine learning <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-secondary fw-light px-2">Deep learning <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-dark fw-light px-2">Generative AI <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-secondary fw-light px-2">Python <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-dark fw-light px-2">SQL <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-secondary fw-light px-2">Data Science <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-dark fw-light px-2">Big Data <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-secondary fw-light px-2">Neural Networks <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-dark fw-light px-2">Data Visualization <i class="fa-solid fa-xmark"></i></span>
+      <span class="badge bg-secondary fw-light px-2">APIs <i class="fa-solid fa-xmark"></i></span>
+
+      <div class="div d-flex align-items-center justify-content-center gap-2 mt-3">
         <button class="btn btn-outline-primary rounded-4">Chat with my GPT</button>
         <button class="btn btn-outline-dark rounded-4">Continue Discover</button>
       </div>
@@ -81,8 +95,23 @@
   </section>
 
   <!-- Profile & Skills -->
-  <section class="profile my-6">
+  <section class="profile">
     <div class="container">
+      <div class="row">
+        <ul class="nav nav-tabs my-5">
+          <li class="nav-item">
+            <a class="nav-link active fw-bold px-5" href="#">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold  px-5" href="#">Profile</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link fw-bold  px-5" href="#">Experiences</a>
+          </li>
+        </ul>
+      </div>
+
       <div class="row">
         <div class="col-md-6">
           <h3 class="text-uppercase fw-bold">Profile</h3>
@@ -203,6 +232,91 @@
   </section>
 
   <!-- Portfolio -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="text-center">
+        <h4 class="text-uppercase fw-bold text-primary">Portfolio</h4>
+        <hr class="w-25 mx-auto" />
+        <h2 class="mb-4">Check Out My Work</h2>
+        <p class="lead">Here is a small sample of my projects.</p>
+      </div>
+
+      <div class="col-md-6 mb-4 shadow-sm rounded-5 p-4 bg-white">
+        <img src="images/project2.jpg" alt="" class="img-fluid rounded-3" />
+
+        <h4 class="fw-bold text-primary mt-3">Proxymus Project</h4>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi debitis aspernatur explicabo ratione
+          repellendus quaerat magnam veniam
+          magni vitae quae architecto dolorum sed iusto, at molestias soluta ipsum. Delectus, asperiores?</p>
+        <p>
+          <span class="badge bg-secondary fw-light px-2">GenAI <i class="fa-solid fa-xmark"></i></span>
+          <span class="badge bg-dark fw-light px-2">WebScrapping <i class="fa-solid fa-xmark"></i></span>
+          <span class="badge bg-secondary fw-light px-2">Cloud computing <i class="fa-solid fa-xmark"></i></span>
+        </p>
+        <a class="btn btn-primary text-white  align-self-start rounded-3" data-bs-toggle="modal"
+          data-bs-target="#modal2">Learn More</a>
+      </div>
+
+    </div>
+
+
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-4">
+          <div class="row d-flex flex-column">
+            <div class="col">
+              <div class="image-container">
+                <img src="images/project2.jpg" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="text-container">
+                <h3 class="display-6 text-primary fw-bold">Proxymus Project</h3>
+
+                <p>
+                  Discover techniques for effective storytelling, engaging
+                  visuals, and compelling calls-to-action. Unlock the secrets of
+                  creating a consistent and authentic brand voice that sets you
+                  apart from the competition.
+                </p>
+                <ul class="list-group list-group-flush lh-lg mb-3">
+                  <li class="list-group-item">
+                    <i class="fas fa-square text-primary"></i>
+                    <strong>Embrace Your Unique Voice:</strong> Learn how to
+                    harness the power of your unique voice.
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-square text-primary"></i>
+                    <strong>Spark Creativity:</strong> Explore techniques to
+                    spark creativity and overcome writer's block.
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-square text-primary"></i>
+                    <strong>Engage Your Readers:</strong> Discover strategies
+                    for creating content that engages your readers on a deeper
+                    level.
+                  </li>
+                </ul>
+                <a href="" class="btn btn-primary text-white rounded-3">Schedule a Demo</a>
+                <button class="btn btn-light rounded-3" data-bs-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
   <section class="portfolio py-5 bg-light">
     <div class="container">
       <div class="text-center mb-5">
