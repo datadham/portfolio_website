@@ -267,11 +267,14 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content p-4">
           <div class="row d-flex flex-column">
+
+            <!--
             <div class="col">
               <div class="image-container">
                 <img src="images/project2.jpg" alt="" class="img-fluid" />
               </div>
             </div>
+            -->
             <div class="col">
               <div class="text-container">
                 <h3 class="display-6 text-primary fw-bold">Proxymus Project</h3>
@@ -378,80 +381,85 @@
   </section>
 
   <!-- ChatSECTION-->
-  <section id='gptchatsection' class="styleshout text-bg-dark bg-gradient p-6 text-center">
+  <section id="gptchatsection" class="text-bg-white bg-gradient p-5 text-center">
     <div class="container">
-
-      <!-- Intro of section -->
-      <div class="row">
-        <div class="col-12">
-          <h1>Chat With My GPT</h1>
-          <hr class="w-25 mx-auto" />
-          <p class="lead mb-5">
-            This GPT is pre-prompted to answer as i should response feel free to ask him anything about me
-            including my journey my personal projects what i've made ect !
-          </p>
-          <a href="https://styleshout.com" target="_blank"
-            class="btn btn-primary btn-lg text-uppercase px-5 mx-3 my-2 rounded-5">
-            Start Chat
-          </a>
-        </div>
+      <h1>Datadham GPT</h1>
+      <hr class="w-25 mx-auto" />
+      <p class="lead mb-5">
+        This GPT is pre-prompted to answer as I should respond. Feel free to ask me anything about my journey, my
+        personal projects, what I've made, etc.!
+      </p>
+      <a href="https://styleshout.com" target="_blank"
+        class="btn btn-primary btn-lg text-uppercase px-5 mx-3 my-2 rounded-5">Start Chat</a>
+    </div>
 
 
-        <!-- Discussion section -->
-        <div class="row"></div>
+    <!-- Discussion Section -->
+    <div class="mt-5 d-block">
+      <h2>Suggestions ?</h2>
 
-        <div class="row">
-          <div class="col-6">
-            <div class="input-group mt-3">
-              <input type="text" class="form-control rounded-5 ms-auto" placeholder="Search Reviews" />
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-6 offset-6">
-            <div class="input-group mt-3">
-              <input type="text" class="form-control rounded-5 ms-auto" placeholder="Search Reviews" />
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <div class="col-6">
-            <div class="input-group mt-3">
-              <input type="text-area" class="form-control rounded-5 ms-auto" placeholder="Search Reviews" />
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-6 offset-6">
-            <div class="input-group mt-3">
-              <input type="text" class="form-control rounded-5 ms-auto" placeholder="Search Reviews" />
-            </div>
-          </div>
-        </div>
-
-
-
+      <div class="row gap-3 mt-1 justify-content-center align-items-center">
+        <p class="col-md-3 p-4 border border-primary border-width-3 rounded text-dark shadow-sm rounded-5">Do you
+          know
+          Python ?</p>
+        <p class="col-3 p-4 bg-light rounded text-dark shadow-sm rounded-5">What is your current position ?</p>
+        <p class="col-3 p-4 bg-light rounded text-dark shadow-sm rounded-5">When are you available ?</p>
+        <p class="col-3 p-4 bg-light rounded text-dark shadow-sm rounded-5">What are your hobbies ?</p>
+        <p class="col-3 p-4 bg-light rounded text-dark shadow-sm rounded-5">Tell me something about you ?</p>
       </div>
 
-    </div>
-    </div>
+
+      <div class="p-3 bg-light rounded-4 mb-3">
+        <div class="title d-flex">
+          <h5 class="mb-1"> You</h5>
+          <small class="ms-auto">11:35</small>
+        </div>
+
+        <p class="text-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis exercitationem,
+          reprehenderit
+          adipisci mollitia autem aliquid necessitatibus eum quasi officiis ea sit iste quam ab ducimus perspiciatis
+          incidunt assumenda architecto. Fuga!.</p>
+      </div>
+
+      <div class="p-3 bg-light rounded-4 mb-3">
+        <div class="title d-flex">
+          <h5 class="mb-1 text-primary">Datadham GPT</h5>
+          <small class="ms-auto">11:34</small>
+        </div>
+
+        <p class="text-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis exercitationem,
+          reprehenderit
+          adipisci mollitia autem aliquid necessitatibus eum quasi officiis ea sit iste quam ab ducimus perspiciatis
+          incidunt assumenda architecto. Fuga!.</p>
+      </div>
 
 
-    <div class="col-6 offset-3 mt-3">
-      <div class="input-group input-group-lg">
-        <input type="text" class="form-control rounded-start-5" placeholder="Search Reviews" />
-        <span class="input-group-text rounded-end-4"><i class="fa-regular fa-paper-plane"></i> </span>
+      <div class="p-3 bg-light rounded-4">
+        <div class="title d-flex">
+          <small class="me-auto">3 days ago</small>
+          <h5 class="mb-1">GPT</h5>
+        </div>
+
+        <p class="text-end">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis exercitationem,
+          reprehenderit
+          adipisci mollitia autem aliquid necessitatibus eum quasi officiis ea sit iste quam ab ducimus perspiciatis
+          incidunt assumenda architecto. Fuga!.</p>
+      </div>
+
+
+      <!-- New Comment Form -->
+      <div class="mb-3">
+        <label for="newComment" class="form-label text-white">Your Comment</label>
+        <textarea class="form-control" id="newComment" rows="3"></textarea>
+        <button class="btn btn-primary mt-3 rounded-5" id="postCommentBtn">Post Comment <i
+            class="fa fa-paper-plane"></i></button>
       </div>
     </div>
     </div>
-    </div>
-    </div>
+
+
+
   </section>
-
 
   <!-- Services -->
   <section class="services text-bg-dark py-5 position-relative">
