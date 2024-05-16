@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <!-- HERO INTRO PAGE-->
   <header class="header vh-100 text-center position-relative">
     <div class="text-container position-relative d-flex flex-column justify-content-center align-items-center h-100">
       <h5 class="text-primary fs-3 fw-bold text-uppercase">Hello, World.</h5>
@@ -60,7 +61,7 @@
     </div>
   </header>
 
-  <!-- About -->
+  <!-- About SECTION INTRO OF MYSELF -->
   <section id="about" class="about bg-light py-5 d-flex flex-column justify-content-center align-items-center"
     style="height:100vh;">
     <div class="container align-items-center">
@@ -89,32 +90,36 @@
       <span class="badge bg-secondary fw-light px-2">APIs <i class="fa-solid fa-xmark"></i></span>
 
       <div class="div d-flex align-items-center justify-content-center gap-2 mt-3">
-        <button class="btn btn-outline-primary rounded-4">Chat with my GPT</button>
-        <button class="btn btn-outline-dark rounded-4">Continue Discover</button>
+        <a class="btn btn-outline-primary rounded-4" href="#gptchatsection">Chat with my GPT</a>
+        <a class="btn btn-outline-dark rounded-4" href="#profile_link">Continue Discover</a>
       </div>
     </div>
   </section>
 
-  <!-- Profile & Skills -->
+  <!-- NAV TAB PROFILE  -->
   <section class="profile">
     <div class="container">
       <div class="row">
         <ul class="nav nav-tabs my-5">
           <li class="nav-item">
-            <a class="nav-link active fw-bold text-uppercase" href="#">Profile</a>
+            <a class="nav-link active fw-bold text-uppercase" href="#profile_link" id="profile_link"
+              onclick="displayManagement('profile-section')">Profile</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link fw-bold  text-uppercase" href="#">Skills</a>
+            <a class="nav-link fw-bold  text-uppercase" href="#skills_link" id="skills_link"
+              onclick="displayManagement('skills-section')">Skills</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link fw-bold text-uppercase" href="#">Experiences</a>
+            <a class="nav-link fw-bold text-uppercase" href="#experiences_link" id="experiences_link"
+              onclick="displayManagement('experiences-section')">Experiences</a>
           </li>
         </ul>
       </div>
 
-      <div class="row">
+      <!-- PROFILE SECTION -->
+      <div class="row" id="profile-section" style="display: block;">
         <h3 class="text-uppercase fw-bold">Profile</h3>
         <p>
           Here is some more info about myself to help you get to know me
@@ -154,7 +159,8 @@
         </ul>
       </div>
 
-      <div class="row">
+      <!-- SKILLS SECTION -->
+      <div class="row" id="skills-section" style="display: none;">
         <h3 class="text-uppercase fw-bold">Skills</h3>
         <p>
           Here is a list of my skills with these dumb percentages that don't
@@ -186,82 +192,117 @@
             Dash, Plotly, Dataiku DSS, PowerBI, Tableau, Excel</span></p>
       </div>
 
-      <div class="row">
+      <!-- EXPERIENCES SECTION -->
+      <div class="row" id="experiences-section" style="display: none;">
         <h3 class="text-uppercase fw-bold">Experiences</h3>
 
-        <div class="row border-bottom">
-          <div class="col-6 d-flex align-items-center justify-content-center">
+        <!-- AMARIS EXPERIENCE -->
+        <div class="row border-bottom d-flex flex-column">
+          <div class="col-12">
             <div class="title">
               <strong class="text-primary fw-light">2024</strong>
               <h4 class="border-left">GenAI & LLM consultant</h4>
               <strong class="text-uppercase">Mantu Group</strong>
             </div>
           </div>
-          <div class="col-6">
-            <p class="text-center mt-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam voluptatem dolorum adipisci
-              laboriosam atque, culpa enim esse rerum fugiat harum molestias excepturi, deserunt labore ipsam provident
-              voluptate repellendus iste.
+          <div class="col-10 offset-1 mb-3">
+            <p class="mt-3">
+              <li>Directed the development of a multi-agent LLM application, enhancing capabilities in <strong>data
+                  extraction</strong>,
+                <strong>summarization</strong>, and <strong>tagging</strong>.
+              </li>
+              <li> Managed Azure-based infrastructures, optimizing resource utilization and performance for critical
+                data
+                operations.</li>
+              <li>Implemented a RAG system on Azure, leveraging exogenous data for dynamic risk profiling and
+                management.
+                Elevated the F1-score of a GenAI summarization agent from <strong>80% to 96%</strong>, significantly
+                boosting operational
+                accuracy and efficiency.</li>
+              <li>Engineered a Python bot for systematic data collection, supporting advanced AI analytics and
+                decision-making frameworks.</li>
+              <li>Enhanced machine learning operations by integrating a Generalized Linear Model, achieving <strong>98%
+                  explained
+                  variance</strong>.</li>
+
+
+              <li> Pioneered an XGBoost model to estimate CO2 emissions, aligning with European environmental standards
+                with
+                a <strong>15% error rate</strong>.</li>
+              <li>
+                Developed a novel GenAI paradigm for telecom, automating customer segmentation across <strong>120
+                  groups</strong> via a
+                sophisticated dual-agent system.</li>
+              <li>Actively disseminated knowledge on cutting-edge LLM technologies, influencing adoption and application
+                strategies across business sectors.</li>
           </div>
         </div>
 
-
-        <div class="row border-bottom">
-          <div class="col-6 d-flex align-items-center justify-content-center">
+        <!-- SOCIETE GENERALE EXPERIENCE -->
+        <div class="row border-bottom d-flex flex-column mt-3">
+          <div class="col-12">
             <div class="title">
               <strong class="text-primary fw-light">2023</strong>
               <h4>Data Scientist / Data Engineer</h4>
               <strong class="text-uppercase">Societe Generale</strong>
             </div>
           </div>
+          <div class="col-10 offset-1 mb-3">
+            <p class="mt-3">
+              <li> Data Architecture, ETL, Pipeline augment data processing from day to minutes improve by <strong>3000%
+                  speed</strong>
+                Recommendation System, Clustering, optimize the segmentation bank client in terms of risk profile to
+                optimize recovery processes</li>
+              <li> Design a BI tool to monitor country level recovery performance of the bank illustrating new
+                statistical
+                KPI’s LargeLoss Factors, Sharpe Ratio, LifetimeValue.</li>
 
-
-
-          <div class="col-6">
-            <p class="text-center mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid s
-              it consequatur doloribus asperiores veritatis nesciunt totam excepturi re
-              pudiandae magnam similique, quaerat maxime adipisci blanditiis eius, ex nihil nam!
-              Ipsum, qui?.</p>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-6 d-flex align-items-center justify-content-center">
+        <!-- M6 GROUP EXPERIENCE-->
+        <div class="row d-flex flex-column mt-3">
+          <div class="col-12">
             <div class="title">
               <strong class="text-primary fw-light">2021</strong>
-              <h4 class="border-left">Data Scientist</h4>
-              <h6 class="border-left fw-bold text-uppercase">M6 Group</h6>
+              <h4>Data Scientist</h4>
+              <strong class="text-uppercase">M6 Group</strong>
             </div>
           </div>
+          <div class="col-10 offset-1">
+            <p class="mt-3">
+              <li>Led the mining of external data for the 'Golden Table' project to optimize content acquisition
+                strategies,
+                enhancing the media catalog's value and audience reach.</li>
+              <li>Conducted <strong>A/B testing</strong> to determinate animation watching factors of the streaming
+                platform.</li>
+              <li>Achieving a churn model with 99% accuracy, significantly reducing customer attrition. <strong>(3-4 K
+                  users
+                  saved
+                  each day)</strong> combining AI efficiency <strong>45K churners</strong> detected each day and CRM
+                team strategy <strong>(10%
+                  return rate)</strong>
+              </li>
 
-
-
-          <div class="col-6">
-            <p class="text-center mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid s
-              it consequatur doloribus asperiores veritatis nesciunt totam excepturi re
-              pudiandae magnam similique, quaerat maxime adipisci blanditiis eius, ex nihil nam!
-              Ipsum, qui?.</p>
           </div>
         </div>
 
       </div>
-    </div>
-    </div>
 
-
-    <div class="row mt-5 text-center">
-      <div class="col-12">
-        <a href="#gptchatsection" class="btn btn-outline-primary btn-lg px-5 mx-3 my-2 rounded-5">Chat
-          With
-          Me</a>
-        <a href="#" class="btn btn-dark btn-lg  px-5 mx-3 my-2 rounded-5">Download CV</a>
+      <!-- SECTION FOOTER -->
+      <div class="row mt-1 text-center">
+        <div class="col-12">
+          <a href="#gptchatsection" class="btn btn-outline-primary btn-lg px-5 mx-3 my-2 rounded-5">Chat
+            With
+            Me</a>
+          <a href="resume.pdf" class="btn btn-dark btn-lg  px-5 mx-3 my-2 rounded-5" target="_blank">Download CV</a>
+        </div>
       </div>
-    </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section class="bg-light py-5">
+  <!-- PORTFOLIO SECTION -->
+  <section class="bg-light py-5 mt-3">
     <div class="container">
       <div class="text-center">
         <h4 class="text-uppercase fw-bold text-primary">Portfolio</h4>
@@ -271,14 +312,313 @@
       </div>
 
 
+      <div class="row">
+        <!-- PROJECT N°1 -->
+        <div class="col-md-6">
+          <div class="card shadow-sm p-3 mb-5 bg-body">
+            <img src="images/projet1.jpg" class="card-img-top" alt="Project Overview"
+              style="height: 200px; object-fit: cover; object-position: center center; opacity: 0.7;">
+            <div class="card-body">
+              <h4 class="card-title text-primary">
+                Welfare Project
+              </h4>
+              <p class="card-text">Explore the cutting-edge capabilities of our Hire 360 Project, designed to
+                revolutionize hiring with advanced analytics and seamless cloud integration. Experience innovation in
+                action and see how we leverage technology to streamline processes.</p>
+              <div class="mb-3">
+                <span class="badge bg-secondary">GenAI <i class="fa-solid fa-xmark"></i></span>
+                <span class="badge bg-dark">Web Scraping <i class="fa-solid fa-xmark"></i></span>
+                <span class="badge bg-secondary">Cloud Computing <i class="fa-solid fa-xmark"></i></span>
+              </div>
+              <a href="#" class="btn btn-primary text-white rounded-3" data-bs-toggle="modal"
+                data-bs-target="#modalWelfare">Learn More</a>
+            </div>
+          </div>
+        </div>
 
-      <div class="row gap-2">
+        <!-- MODAL OF THE PROJECT  N°1 -->
+        <div id="modalWelfare" class="modal fade">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content p-4">
+              <div class="row d-flex flex-column">
+
+                <!--
+              <div class="col">
+                <div class="image-container">
+                  <img src="images/project2.jpg" alt="" class="img-fluid" />
+                </div>
+              </div>
+              -->
+                <div class="col">
+                  <div class="text-container">
+                    <h3 class="display-6 text-primary fw-bold">Welfare Project</h3>
+
+                    <p>
+                      Welcome to my portfolio! During my research journey, I embarked on a fascinating project focused
+                      on
+                      modeling human metabolism and applying advanced artificial intelligence methods to create
+                      predictive
+                      models of well-being. My study centered on an extensive database comprising no less than 71,000
+                      individuals, allowing for comprehensive multi-dimensional analysis.</p>
+
+                    <p>The central aim of this thesis was to gain an in-depth understanding of the complex interactions
+                      between human metabolism and well-being, utilizing advanced modeling techniques and artificial
+                      intelligence. Through a detailed exploration of this massive dataset, I sought to identify trends,
+                      correlations, and key factors influencing individuals' well-being.</p>
+
+                    <p>
+                      This project has been an exciting endeavor, merging biology, data science, and AI to offer fresh
+                      and
+                      valuable insights into how our metabolism may impact our well-being. The predictive models I
+                      developed have potential applications in the fields of health, disease prevention, and improving
+                      quality of life.</p>
+
+                    <p>
+                      I invite you to delve further into this project in my portfolio, where you will discover the
+                      details
+                      of my methodology, the fascinating results I achieved, and the potential implications of this
+                      research for our understanding of human metabolism and well-being. I hope this exploration
+                      inspires
+                      you as much as it has inspired me.
+                    </p>
+                    <ul class="list-group list-group-flush lh-lg mb-3">
+                      <li class="list-group-item">
+                        <i class="fas fa-square text-primary"></i>
+                        <strong>Embrace Your Unique Voice:</strong> Learn how to
+                        harness the power of your unique voice.
+                      </li>
+                      <li class="list-group-item">
+                        <i class="fas fa-square text-primary"></i>
+                        <strong>Spark Creativity:</strong> Explore techniques to
+                        spark creativity and overcome writer's block.
+                      </li>
+                      <li class="list-group-item">
+                        <i class="fas fa-square text-primary"></i>
+                        <strong>Engage Your Readers:</strong> Discover strategies
+                        for creating content that engages your readers on a deeper
+                        level.
+                      </li>
+                    </ul>
+                    <a href="https://github.com/datadham/WelfareDataModelisation"
+                      class="btn btn-primary text-white rounded-3" target="_blank">View Code</a>
+                    <button class="btn btn-light rounded-3" data-bs-dismiss="modal">
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- PROJECT N°2 -->
+        <div class="col-md-6">
+          <div class="card shadow-sm p-3 mb-5 bg-body">
+            <img src="images/projet1.jpg" class="card-img-top" alt="Project Overview"
+              style="height: 200px; object-fit: cover; object-position: center center; opacity: 0.7;">
+            <div class="card-body">
+              <h4 class="card-title text-primary">
+                Welfare Project
+              </h4>
+              <p class="card-text">Explore the cutting-edge capabilities of our Hire 360 Project, designed to
+                revolutionize hiring with advanced analytics and seamless cloud integration. Experience innovation in
+                action and see how we leverage technology to streamline processes.</p>
+              <div class="mb-3">
+                <span class="badge bg-secondary">GenAI <i class="fa-solid fa-xmark"></i></span>
+                <span class="badge bg-dark">Web Scraping <i class="fa-solid fa-xmark"></i></span>
+                <span class="badge bg-secondary">Cloud Computing <i class="fa-solid fa-xmark"></i></span>
+              </div>
+              <a href="#" class="btn btn-primary text-white rounded-3" data-bs-toggle="modal"
+                data-bs-target="#modal">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL OF THE PROJECT  N°2 -->
+        <div id="modal" class="modal fade">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content p-4">
+              <div class="row d-flex flex-column">
+
+                <!--
+              <div class="col">
+                <div class="image-container">
+                  <img src="images/project2.jpg" alt="" class="img-fluid" />
+                </div>
+              </div>
+              -->
+                <div class="col">
+                  <div class="text-container">
+                    <h3 class="display-6 text-primary fw-bold">Welfare Project</h3>
+
+                    <p>
+                      Welcome to my portfolio! During my research journey, I embarked on a fascinating project focused
+                      on
+                      modeling human metabolism and applying advanced artificial intelligence methods to create
+                      predictive
+                      models of well-being. My study centered on an extensive database comprising no less than 71,000
+                      individuals, allowing for comprehensive multi-dimensional analysis.</p>
+
+                    <p>The central aim of this thesis was to gain an in-depth understanding of the complex interactions
+                      between human metabolism and well-being, utilizing advanced modeling techniques and artificial
+                      intelligence. Through a detailed exploration of this massive dataset, I sought to identify trends,
+                      correlations, and key factors influencing individuals' well-being.</p>
+
+                    <p>
+                      This project has been an exciting endeavor, merging biology, data science, and AI to offer fresh
+                      and
+                      valuable insights into how our metabolism may impact our well-being. The predictive models I
+                      developed have potential applications in the fields of health, disease prevention, and improving
+                      quality of life.</p>
+
+                    <p>
+                      I invite you to delve further into this project in my portfolio, where you will discover the
+                      details
+                      of my methodology, the fascinating results I achieved, and the potential implications of this
+                      research for our understanding of human metabolism and well-being. I hope this exploration
+                      inspires
+                      you as much as it has inspired me.
+                    </p>
+                    <ul class="list-group list-group-flush lh-lg mb-3">
+                      <li class="list-group-item">
+                        <i class="fas fa-square text-primary"></i>
+                        <strong>Embrace Your Unique Voice:</strong> Learn how to
+                        harness the power of your unique voice.
+                      </li>
+                      <li class="list-group-item">
+                        <i class="fas fa-square text-primary"></i>
+                        <strong>Spark Creativity:</strong> Explore techniques to
+                        spark creativity and overcome writer's block.
+                      </li>
+                      <li class="list-group-item">
+                        <i class="fas fa-square text-primary"></i>
+                        <strong>Engage Your Readers:</strong> Discover strategies
+                        for creating content that engages your readers on a deeper
+                        level.
+                      </li>
+                    </ul>
+                    <a href="https://github.com/datadham/WelfareDataModelisation"
+                      class="btn btn-primary text-white rounded-3" target="_blank">View Code</a>
+                    <button class="btn btn-light rounded-3" data-bs-dismiss="modal">
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT N°2 -->
+        <div class="col-md-6">
+          <div class="card shadow-sm p-3 mb-5 bg-body">
+            <img src="images/projet1.jpg" class="card-img-top" alt="Project Overview"
+              style="height: 200px; object-fit: cover; object-position: center center; opacity: 0.7;">
+            <div class="card-body">
+              <h4 class="card-title text-primary">
+                Trading Proje
+              </h4>
+              <p class="card-text">Explore the cutting-edge capabilities of our Hire 360 Project, designed to
+                revolutionize hiring with advanced analytics and seamless cloud integration. Experience innovation in
+                action and see how we leverage technology to streamline processes.</p>
+              <div class="mb-3">
+                <span class="badge bg-secondary">GenAI <i class="fa-solid fa-xmark"></i></span>
+                <span class="badge bg-dark">Web Scraping <i class="fa-solid fa-xmark"></i></span>
+                <span class="badge bg-secondary">Cloud Computing <i class="fa-solid fa-xmark"></i></span>
+              </div>
+              <a href="#" class="btn btn-primary text-white rounded-3" data-bs-toggle="modal"
+                data-bs-target="#modal3">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL OF THE PROJECT  N°3 -->
+        <div id="modal3" class="modal fade">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content p-4">
+              <div class="row d-flex flex-column">
+
+                <!--
+              <div class="col">
+                <div class="image-container">
+                  <img src="images/project2.jpg" alt="" class="img-fluid" />
+                </div>
+              </div>
+              -->
+                <div class="col">
+                  <div class="text-container">
+                    <h3 class="display-6 text-primary fw-bold">Welfare Project</h3>
+
+                    <p>
+                      Welcome to my portfolio! During my research journey, I embarked on a fascinating project focused
+                      on
+                      modeling human metabolism and applying advanced artificial intelligence methods to create
+                      predictive
+                      models of well-being. My study centered on an extensive database comprising no less than 71,000
+                      individuals, allowing for comprehensive multi-dimensional analysis.</p>
+
+                    <p>The central aim of this thesis was to gain an in-depth understanding of the complex interactions
+                      between human metabolism and well-being, utilizing advanced modeling techniques and artificial
+                      intelligence. Through a detailed exploration of this massive dataset, I sought to identify trends,
+                      correlations, and key factors influencing individuals' well-being.</p>
+
+                    <p>
+                      This project has been an exciting endeavor, merging biology, data science, and AI to offer fresh
+                      and
+                      valuable insights into how our metabolism may impact our well-being. The predictive models I
+                      developed have potential applications in the fields of health, disease prevention, and improving
+                      quality of life.</p>
+
+                    <p>
+                      I invite you to delve further into this project in my portfolio, where you will discover the
+                      details
+                      of my methodology, the fascinating results I achieved, and the potential implications of this
+                      research for our understanding of human metabolism and well-being. I hope this exploration
+                      inspires
+                      you as much as it has inspired me.
+                    </p>
+                    <ul class="list-group list-group-flush lh-lg mb-3">
+                      <li class="list-group-item">
+                        <i class="fas fa-square text-primary"></i>
+                        <strong>Embrace Your Unique Voice:</strong> Learn how to
+                        harness the power of your unique voice.
+                      </li>
+                      <li class="list-group-item">
+                        <i class="fas fa-square text-primary"></i>
+                        <strong>Spark Creativity:</strong> Explore techniques to
+                        spark creativity and overcome writer's block.
+                      </li>
+                      <li class="list-group-item">
+                        <i class="fas fa-square text-primary"></i>
+                        <strong>Engage Your Readers:</strong> Discover strategies
+                        for creating content that engages your readers on a deeper
+                        level.
+                      </li>
+                    </ul>
+                    <a href="https://github.com/datadham/WelfareDataModelisation"
+                      class="btn btn-primary text-white rounded-3" target="_blank">View Code</a>
+                    <button class="btn btn-light rounded-3" data-bs-dismiss="modal">
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+      <div class="row gap-2 d-none">
 
         <div class="col shadow-sm rounded-5 p-4 bg-white">
-          <img src="images/project2.jpg" alt="" class="img-fluid rounded-3" />
-
-          <h4 class="fw-bold text-primary mt-3">Proxymus Project</h4>
-
+          <img src="images/projet1.jpg" alt="" class="img-fluid rounded-3" />
+          <h4 class="fw-bold text-primary mt-3">Hire 360 Project</h4>
           <p>Lorem ipsum ?</p>
           <p>
             <span class="badge bg-secondary fw-light px-2">GenAI <i class="fa-solid fa-xmark"></i></span>
@@ -292,7 +632,7 @@
         <div class="col shadow-sm rounded-5 p-4 bg-white">
           <img src="images/project2.jpg" alt="" class="img-fluid rounded-3" />
 
-          <h4 class="fw-bold text-primary mt-3">Proxymus Project</h4>
+          <h4 class="fw-bold text-primary mt-3">Welfare Project</h4>
 
           <p>Lorem ipsum dolor </p>
           <p>
@@ -307,7 +647,22 @@
         <div class="col shadow-sm rounded-5 p-4 bg-white">
           <img src="images/project2.jpg" alt="" class="img-fluid rounded-3" />
 
-          <h4 class="fw-bold text-primary mt-3">Proxymus Project</h4>
+          <h4 class="fw-bold text-primary mt-3">Trading Project</h4>
+
+          <small>This project was about making VR in blockchain</small>
+          <p>
+            <span class="badge bg-secondary fw-light px-2">GenAI <i class="fa-solid fa-xmark"></i></span>
+            <span class="badge bg-dark fw-light px-2">WebScrapping <i class="fa-solid fa-xmark"></i></span>
+            <span class="badge bg-secondary fw-light px-2">Cloud computing <i class="fa-solid fa-xmark"></i></span>
+          </p>
+          <a class="btn btn-primary text-white  align-self-start rounded-3" data-bs-toggle="modal"
+            data-bs-target="#modal2">Learn More</a>
+        </div>
+
+        <div class="col shadow-sm rounded-5 p-4 bg-white">
+          <img src="images/project2.jpg" alt="" class="img-fluid rounded-3" />
+
+          <h4 class="fw-bold text-primary mt-3">Trading Project</h4>
 
           <small>This project was about making VR in blockchain</small>
           <p>
@@ -324,64 +679,10 @@
     </div>
 
 
-    <!-- Modal 2 -->
-    <div id="modal2" class="modal fade">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content p-4">
-          <div class="row d-flex flex-column">
-
-            <!--
-            <div class="col">
-              <div class="image-container">
-                <img src="images/project2.jpg" alt="" class="img-fluid" />
-              </div>
-            </div>
-            -->
-            <div class="col">
-              <div class="text-container">
-                <h3 class="display-6 text-primary fw-bold">Proxymus Project</h3>
-
-                <p>
-                  Discover techniques for effective storytelling, engaging
-                  visuals, and compelling calls-to-action. Unlock the secrets of
-                  creating a consistent and authentic brand voice that sets you
-                  apart from the competition.
-                </p>
-                <ul class="list-group list-group-flush lh-lg mb-3">
-                  <li class="list-group-item">
-                    <i class="fas fa-square text-primary"></i>
-                    <strong>Embrace Your Unique Voice:</strong> Learn how to
-                    harness the power of your unique voice.
-                  </li>
-                  <li class="list-group-item">
-                    <i class="fas fa-square text-primary"></i>
-                    <strong>Spark Creativity:</strong> Explore techniques to
-                    spark creativity and overcome writer's block.
-                  </li>
-                  <li class="list-group-item">
-                    <i class="fas fa-square text-primary"></i>
-                    <strong>Engage Your Readers:</strong> Discover strategies
-                    for creating content that engages your readers on a deeper
-                    level.
-                  </li>
-                </ul>
-                <a href="" class="btn btn-primary text-white rounded-3">Schedule a Demo</a>
-                <button class="btn btn-light rounded-3" data-bs-dismiss="modal">
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </section>
 
 
-
-
-
+  <!-- PORTFOLIO EXAMPLE-->
   <section class="portfolio py-5 bg-light d-none">
     <div class="container">
       <div class="text-center mb-5">
@@ -390,6 +691,25 @@
         <h2 class="mb-4">Check Out My Work</h2>
         <p class="lead">Here is a small sample of my projects.</p>
       </div>
+
+      <div class="card shadow-sm">
+        <img src="images/projet1.jpg" class="card-img-top img-fluid rounded-3" alt="">
+        <div class="card-body">
+          <h4 class="card-title fw-bold text-primary">Company Activity Project</h4>
+          <p class="card-text">Lorem ipsum ?</p>
+          <div class="mb-3">
+            <span class="badge bg-secondary">GenAI <i class="fa-solid fa-xmark"></i></span>
+            <span class="badge bg-dark">WebScrapping <i class="fa-solid fa-xmark"></i></span>
+            <span class="badge bg-secondary">Cloud computing <i class="fa-solid fa-xmark"></i></span>
+          </div>
+          <a href="#" class="btn btn-primary text-white rounded-3" data-bs-toggle="modal" data-bs-target="#modal2">Learn
+            More</a>
+        </div>
+      </div>
+
+
+
+
       <div class="row">
         <div class="col-md-6 mb-4">
           <div class="project shadow-lg rounded-5">
@@ -456,57 +776,66 @@
     </div>
 
 
-    <!-- Discussion Section -->
-    <div class="mt-5 d-block">
-      <h2>Suggestions ?</h2>
-
-      <div class="row gap-3 mt-1 justify-content-center align-items-center">
-        <p class="col-md-3 p-4 border border-primary border-width-3 rounded text-dark shadow-sm rounded-5">Do you
-          know
-          Python ? <i class="fa-regular fa-upload rounded-2 bg-light p-2 text-dark ms-1"></i></p>
-        <p class="col-3 p-4 bg-light rounded text-dark shadow-sm rounded-5">What is your current position ?</p>
-        <p class="col-3 p-4 bg-light rounded text-dark shadow-sm rounded-5">When are you available ?</p>
-        <p class="col-3 p-4 bg-light rounded text-dark shadow-sm rounded-5">What are your hobbies ?</p>
-        <p class="col-3 p-4 bg-light rounded text-dark shadow-sm rounded-5">Tell me something about you ?</p>
-      </div>
-
-
-      <div class="p-3 bg-light rounded-4 mb-3">
-        <div class="title d-flex">
-          <h5 class="mb-1"> You</h5>
-          <small class="ms-auto">11:35</small>
+    <div class="container mt-5">
+      <!-- Suggestions part -->
+      <div class="mt-5 d-block" id="suggestions">
+        <h2>Suggestions ?</h2>
+        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-3 my-3">
+          <div class="col">
+            <button class="btn btn-light w-100 rounded-4 p-3" onclick="sendMessage('Do you know Python?')">
+              Do you know Python?
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-light w-100 rounded-4 p-3" onclick="sendMessage('What is your current position?')">
+              What is your current position?
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-light w-100 rounded-4 p-3" onclick="sendMessage('When are you available?')">
+              When are you available?
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-light w-100 rounded-4 p-3" onclick="sendMessage('What are your hobbies?')">
+              What are your hobbies?
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-light w-100 rounded-4 p-3" onclick="sendMessage('Tell me something about you?')">
+              Tell me something about you?
+            </button>
+          </div>
         </div>
-
-        <p class="text-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis exercitationem,
-          reprehenderit
-          adipisci mollitia autem aliquid necessitatibus eum quasi officiis ea sit iste quam ab ducimus perspiciatis
-          incidunt assumenda architecto. Fuga!.</p>
       </div>
 
-      <div class="p-3 bg-light rounded-4 mb-3">
-        <div class="title d-flex">
-          <h5 class="mb-1 text-primary">Datadham GPT</h5>
-          <small class="ms-auto">11:34</small>
-        </div>
+      <div id='discussion-box' class="mb-4">
 
-        <p class="text-start">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis exercitationem,
-          reprehenderit
-          adipisci mollitia autem aliquid necessitatibus eum quasi officiis ea sit iste quam ab ducimus perspiciatis
-          incidunt assumenda architecto. Fuga!.</p>
       </div>
 
 
-      <!-- New Comment Form -->
-      <div class="mb-3">
-        <label for="newComment" class="form-label text-white">Your Comment</label>
-        <textarea class="form-control" id="newComment" rows="3"></textarea>
-        <button class="btn btn-primary mt-3 rounded-5" id="postCommentBtn">Post Comment <i
-            class="fa fa-paper-plane"></i></button>
-        <button class="btn btn-dark mt-3 rounded-5" id="postCommentBtn">Generating ... <i
-            class="fa-regular fa-hourglass-start"></i></button>
-      </div>
+
+
+    </div>
+
+
+    <!-- Add chat Form -->
+    <div class="mb-3">
+      <label for="newComment" class="form-label text-dark">Your Prompt</label>
+      <textarea class="form-control" id="newComment" rows="3"></textarea>
+      <button class="btn btn-primary mt-3 rounded-5" onclick="sendMessage()">Post Comment <i
+          class="fa fa-paper-plane"></i></button>
+      <button class="btn btn-dark mt-3 rounded-5" id="generatingBtn">Generating ... <i
+          class="fa-regular fa-hourglass-start"></i></button>
+
+      <button class="btn btn-light mt-3 rounded-5" id="ClearBtn" onclick="clearChat()">Clear Chat <i
+          class="fa-solid fa-broom"></i></button>
+
+
     </div>
     </div>
+
+
 
 
 

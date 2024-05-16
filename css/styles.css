@@ -1,5 +1,4 @@
-.header,
-.text-picture {
+.header {
   background: #151515 url("../images/intro-bg.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
@@ -21,6 +20,10 @@
 
 .header .social {
   bottom: 50px;
+}
+
+.about-img {
+  width: 200px;
 }
 
 .project:hover {
