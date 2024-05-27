@@ -53,6 +53,26 @@
   z-index: 10;
 }
 
+
+
+#PostBtn,
+#GeneratingBtn {
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#PostBtn.d-none,
+#GeneratingBtn.d-none {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#PostBtn:not(.d-none),
+#GeneratingBtn:not(.d-none) {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 @media (max-width: 767px) {
   .header .social i {
     font-size: 30px;
@@ -72,4 +92,8 @@
     border-bottom: var(--bs-dark) solid 1px;
     padding-bottom: 20px;
   }
+}
+
+.contact .form-control::placeholder {
+  color: var(--bs-light);
 }

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/lightbox.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../images/favicon.png" />
+    <title>Adham Azenbar | Data Scientist</title>
+</head>
+
+<style>
+    body {
+        padding-top: 20px;
+    }
+
+    .carousel-item img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <img src="../images/project2.jpg" class="img-fluid" alt="Responsive image">
+        <h1>AI and Well-Being: A Predictive Approach</h1>
+
+        <!-- Carousel -->
+        <div id="wellBeingCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#wellBeingCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#wellBeingCarousel" data-slide-to="1"></li>
+                <li data-target="#wellBeingCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active text-primary">
+                    <img src="../images/project5.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Data Dashboard</h5>
+                        <p>A futuristic data dashboard with clusters of well-being data.</p>
+                    </div>
+                </div>
+                <div class="carousel-item text-primary">
+                    <img src="../images/project4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Cholesterol Levels</h5>
+                        <p>High cholesterol levels are linked to increased heart risk.</p>
+                    </div>
+                </div>
+                <div class="carousel-item text-primary">
+                    <img src="../images/project3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Healthy Lifestyle</h5>
+                        <p>Regular physical activity and healthy eating reduce heart risk.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev text-primary" href="#wellBeingCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next text-primary" href="#wellBeingCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Article Content -->
+        <div class="mt-4">
+            <h2>Introduction</h2>
+            <p>As an expert data scientist, leveraging AI for predicting well-being is a sophisticated task that
+                involves clustering metabolic data to maintain homeostasis. This article explores how AI can segment and
+                visualize this data to provide nuanced insights.</p>
+
+            <h2>Data Collection</h2>
+            <p>Utilize open-source datasets encompassing physical health, behavior, and subjective well-being indices.
+                These datasets will be segmented into distinct profiles.</p>
+
+            <h2>Profile Segmentation</h2>
+            <p>Segment the dataset into profiles based on:</p>
+            <ul>
+                <li><strong>Well-being Index Decline:</strong> Significant drops in well-being scores.</li>
+                <li><strong>Behavioral Changes:</strong> Notable shifts in routines or habits.</li>
+                <li><strong>Physical Performance Decrease:</strong> Observed reductions in physical activity or
+                    capability.</li>
+                <li><strong>Health Levels:</strong> Variations in health metrics (e.g., blood pressure, heart rate).
+                </li>
+                <li><strong>Subjective Evaluation:</strong> Individual perceptions of well-being.</li>
+                <li><strong>Emotional Consequences:</strong> Emotional impacts from various factors.</li>
+            </ul>
+
+            <h2>Binary Approach</h2>
+            <p>Initially, define a "Downer" using binary criteria. The goal is to develop a supervised model to detect
+                these behaviors and provide interpretations.</p>
+
+            <h2>Dimensional Analysis: Clusters and Interpretation</h2>
+            <p>Dimensional analysis allows deeper exploration by reducing data dimensionality to visualize relationships
+                between individuals and metabolisms. This helps in identifying distinct clusters and understanding
+                complex trends.</p>
+
+            <h3>Objectives</h3>
+            <ul>
+                <li><strong>Discover Distinct Clusters:</strong> Identify natural groupings in the data.</li>
+                <li><strong>Understand Trends:</strong> Detect complex relationships between different well-being
+                    dimensions.</li>
+            </ul>
+
+            <h3>Interpretation</h3>
+            <p>Interpret results multidimensionally to understand natural groupings and relationships.</p>
+
+            <h2>Advantages of Dimensional Analysis</h2>
+            <ul>
+                <li><strong>Multidimensional Analysis:</strong> Explore data from multiple perspectives.</li>
+                <li><strong>Nuanced Interpretation:</strong> Gain richer, detailed insights.</li>
+                <li><strong>Deeper Understanding:</strong> Discover hidden relationships and non-obvious clusters.</li>
+                <li><strong>Flexibility:</strong> Adaptable to various data sources and types.</li>
+            </ul>
+
+            <h2>Exploratory Data Analysis (EDA) and Factors</h2>
+
+            <h3>Cholesterol Levels and Heart Risk</h3>
+            <ul>
+                <li><strong>Correlation:</strong> A significant positive correlation exists between high cholesterol
+                    levels and the risk of heart diseases.</li>
+                <li><strong>Implications:</strong> Individuals with high cholesterol levels are at increased risk of
+                    developing cardiac problems.</li>
+            </ul>
+
+            <h3>Influence of Smoking</h3>
+            <ul>
+                <li><strong>Correlation:</strong> Smoking is strongly associated with a higher risk of heart diseases.
+                </li>
+                <li><strong>Implications:</strong> Smokers have a significantly higher risk of developing cardiac issues
+                    compared to non-smokers.</li>
+            </ul>
+
+            <h3>Impact of a Healthy Lifestyle</h3>
+            <ul>
+                <li><strong>Correlation:</strong> Regular physical activity and higher consumption of fruits and
+                    vegetables are linked to a lower risk of heart disease.</li>
+                <li><strong>Implications:</strong> Adopting a healthy lifestyle can contribute to reducing the risk of
+                    heart diseases.</li>
+            </ul>
+
+            <h3>Solid Foundation for Modeling</h3>
+            <p>The results of the exploratory data analysis provide a solid foundation for future modeling aimed at
+                predicting heart risk and developing personalized well-being recommendations.</p>
+
+            <h2>Conclusion</h2>
+            <p>Using AI to predict well-being allows for proactive, personalized interventions. Clustering metabolic
+                data and employing multidimensional approaches provide deeper, nuanced understandings of well-being
+                factors, enabling more effective solutions for maintaining homeostasis and improving quality of life.
+                The findings from EDA further support the development of predictive models for heart risk, highlighting
+                key factors such as cholesterol levels, smoking, and lifestyle choices.</p>
+        </div>
+    </div>
+</body>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/lightbox-plus-jquery.min.js"></script>
+<script src="../js/script.js"></script>
+
+</html>

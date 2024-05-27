@@ -69,17 +69,20 @@ document.querySelectorAll('#suggestions button').forEach(button => {
 
 
 
-
 function sendMessage(predefinedMessage = null) {
   const userInput = document.getElementById('newComment');
   const message = predefinedMessage || userInput.value.trim();
 
   if (message) {
+    toggleGeneratingButton(true);
     appendMessage('You', message, 'user-chat');
-    appendMessage('Datadham GPT', `You asked: "${message}". Here is a simulated response.`, 'system-chat');
+
+    setTimeout(() => {
+      appendMessage('Datadham GPT', `You asked: "${message}". Here is a simulated response.`, 'system-chat');
+      toggleGeneratingButton(false);
+    }, 2000); // Simulate response time
+
     userInput.value = '';
-
-
   }
 }
 
@@ -122,3 +125,38 @@ function clearChat() {
 }
 
 
+function toggleGeneratingButton(isGenerating) {
+  const generatingBtn = document.getElementById('GeneratingBtn');
+  const postCommentBtn = document.getElementById('PostBtn');
+
+  if (isGenerating) {
+    generatingBtn.classList.remove('d-none');
+    postCommentBtn.classList.add('d-none');
+  } else {
+    generatingBtn.classList.add('d-none');
+    postCommentBtn.classList.remove('d-none');
+  }
+}
+
+
+async function generateResponse(question) {
+  const apiKey = 'YOUR_OPENAI_API_KEY';
+  const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+  const requestBody = {
+    prompt: question,
+    max_tokens: 150,
+    temperature: 0.7,
+  };
+
+  const response = await fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    },
+    body: JSON.stringify(requestBody)
+  });
+
+  const data = await response.json();
+  return data.choices[0].text.trim();
+}
